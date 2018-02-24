@@ -1,0 +1,22 @@
+R0: Todas las fechas serán presentadas como tuplas de tres números enteros positivos
+(ternas), en este orden: (año, mes, día).
+
+R1: (bisiesto): Dado un año perteneciente al rango permitido, determinar si este es
+bisiesto. El resultado debe ser un valor booleano, True o False.
+
+R2: (fecha_es_valida): Dada una fecha, determinar si ésta es válida. El resultado debe
+ser un valor booleano, True o False.
+
+R3: (dia_siguiente): Dada una fecha válida, determinar la fecha del día siguiente. El
+resultado debe ser una fecha válida (tupla de tres números enteros positivos que
+corresponde a una fecha en el Calendario gregoriano.
+
+R4: (días_desde_primero_enero): Dada una fecha válida, determinar el número de días
+transcurridos desde el primero de enero de su año (el número de días transcurridos
+entre el primero de enero y el primero de enero, dentro de un mismo año, es 0). El
+resultado debe ser un número entero.
+
+R5; (dia_primero_enero): Dado un año perteneciente al rango permitido, determinar el
+día de la semana que le corresponde, con la siguiente codificación: 0 = domingo, 1 =
+lunes, 2 = martes, 3 = miércoles, 4 = jueves, 5 = viernes, 6 = sábado. El resultado debe
+ser un número entero, conforme a la codificación indicada.
