@@ -1,3 +1,7 @@
+'''
+R2: (fecha_es_valida): Dada una fecha, determinar si ésta es válida. El resultado debe
+ser un valor booleano, True o False.
+'''
 
 '''
 Ingresa una tupla válida con la fecha,
@@ -16,11 +20,12 @@ def esEnteroPositivo(fecha):
 	return res
 
 '''
-Requerimiento R2:
 Ingresa una tubla de tamaño 3, 
 correspondiente a una fecha en formato (año,mes,día).
+La salida es True o False.
 '''
 def fecha_es_valida(fecha):
+	#listas de número de mes correspondiente a la cantidad de días que tienen.
 	meses31Dias = (1, 3, 5, 7, 8, 10, 12)
 	meses30Dias = (4, 6, 9, 11)
 	#Validaciones de tipo y formato de la fecha.
@@ -93,7 +98,63 @@ def esBisiesto(anio):
 	return res
 
 
+'''
+R3: (dia_siguiente): Dada una fecha válida, determinar la fecha del día siguiente. El
+resultado debe ser una fecha válida (tupla de tres números enteros positivos que
+corresponde a una fecha en el Calendario gregoriano.
+'''
+
+def dia_siguiente(fecha_valida):
+	#listas de número de mes correspondiente a la cantidad de días que tienen.
+	meses31Dias = (1, 3, 5, 7, 8, 10, 12)
+	meses30Dias = (4, 6, 9, 11)
+	#Variables para resultado final.
+	anio = fecha_valida[0]
+	mes  = fecha_valida[1]
+	dia  = fecha_valida[2]
+
+	#Si es Febrero.
+	if fecha_valida[1] == 2:
+		#Revizar caso de año bisiesto.
+		if (esBisiesto(fecha_valida[0])): 
+			if fecha_valida[2] < 29:
+				dia = fecha_valida[2] + 1
+			else:
+				mes = fecha_valida[1] + 1
+				dia = 1
+		else:
+			if fecha_valida[2] < 28:
+				dia = fecha_valida[2] + 1
+			else:
+				mes = fecha_valida[1] + 1
+				dia = 1
+	#Si es Diciembre.
+	elif fecha_valida[1] == 12 and fecha_valida[2] == 31:
+		anio = fecha_valida[0] + 1
+		mes = 1
+		dia = 1
+	#Cualquier mes
+	else:
+		#Validar meses de 30 días.
+		if fecha_valida[1] in meses30Dias:
+			if fecha_valida[2] < 30:
+				dia = fecha_valida[2] + 1
+			else:
+				mes = fecha_valida[1] + 1
+				dia = 1
+		elif fecha_valida[1] in meses31Dias:	
+			if fecha_valida[2] < 31:
+				dia = fecha_valida[2] + 1
+			else:
+				mes = fecha_valida[1] + 1
+				dia = 1
+	a = (anio, mes, dia)
+	print(a)
+	return (anio, mes, dia)
+
+
 #esEnteroPositivo((12,12,12))
-fecha_es_valida((2018,2,29)) 
+#fecha_es_valida((2018,2,29)) 
+#dia_siguiente((2018,11,8))
 #PROBAR CON MÁS NÚMEROS EN LA TUPLA.
 #esBisiesto(2016)
