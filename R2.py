@@ -1,5 +1,10 @@
 
+'''
+Ingresa una tupla válida con la fecha,
+se reviza que sus número sean enteros positivos.
 
+La salida es True o False.
+'''
 def esEnteroPositivo(fecha):
 	res = False
 	for n in fecha:
@@ -75,6 +80,9 @@ def fecha_es_valida(fecha):
 '''
 Los años bisiestos son aquellos multiplos de 4,
 excepto aquellos múltiplos de 100, pero no de 400.
+
+La entrada es el año en formato YYYY válido.
+La salida es True o False.
 '''
 def esBisiesto(anio):
 	res = False
