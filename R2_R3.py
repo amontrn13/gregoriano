@@ -154,7 +154,17 @@ def dia_siguiente(fecha_valida):
 
 
 #esEnteroPositivo((12,12,12))
-#fecha_es_valida((2018,2,29)) 
-#dia_siguiente((2018,11,8))
+#fecha_es_valida((2018,2,29))
+#fecha_es_valida((110,2,27)) 
+#fecha_es_valida((1995,9,4)) 
+#fecha_es_valida((1526,9,3))
+
+dia_siguiente((2018,11,8))
+#dia_siguiente((1009,9,1))
+#dia_siguiente((3456,1,6))
+#dia_siguiente((2007,12,8))
+#dia_siguiente((2018,6,5))
+
+
 #PROBAR CON MÁS NÚMEROS EN LA TUPLA.
 #esBisiesto(2016)
